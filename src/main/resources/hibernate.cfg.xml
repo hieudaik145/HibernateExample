@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hibernateedu?autoReconnect=true&amp;useUnicode=true&amp;createDatabaseIfNotExist=true&amp;characterEncoding=utf-8</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">123456</property>
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">create</property>
+    
+		 <mapping class="edu.fa.model.Course"/>
+		 <mapping class="edu.fa.model.Fresher"/>
+		 <mapping class="edu.fa.model.Address"/>
+		 <mapping class="edu.fa.model.Group"/>
+
+    </session-factory>
+
+</hibernate-configuration>
